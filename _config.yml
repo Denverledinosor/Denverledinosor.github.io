@@ -29,7 +29,9 @@ url: "https://denverledinosor" # the base hostname & protocol for your site, e.g
 twitter_username: denverledinosor
 github_username:  denverledinosor
 
+lang: fr_FR
 # Build settings
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
