@@ -20,7 +20,7 @@
 
 title: Denverledinosor
 email: denverledinosor@protonmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: Ce blog est à moi # this means to ignore newlines until "baseurl:"
 Eh voilà une description
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://denverledinosor" # the base hostname & protocol for your site, e.g. http://example.com
