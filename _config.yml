@@ -30,7 +30,7 @@ github_username:  denverledinosor
 lang: fr_FR
 # Build settings
 markdown: kramdown
-theme: modernist
+theme: minima
 plugins:
   - jekyll-feed
 
