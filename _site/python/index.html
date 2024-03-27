@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr_FR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python | Denverledinosor</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Python" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="Note python" />
+<meta property="og:description" content="Note python" />
+<link rel="canonical" href="http://localhost:4000/python/" />
+<meta property="og:url" content="http://localhost:4000/python/" />
+<meta property="og:site_name" content="Denverledinosor" />
+<meta property="og:image" content="http://localhost:4000/assets/uploads/python.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-26T11:35:09+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/uploads/python.jpeg" />
+<meta property="twitter:title" content="Python" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-26T11:35:09+01:00","datePublished":"2024-03-26T11:35:09+01:00","description":"Note python","headline":"Python","image":"http://localhost:4000/assets/uploads/python.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/python/"},"url":"http://localhost:4000/python/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Denverledinosor" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Denverledinosor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">À propos de Denverledinosor.fr</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <img src="/assets/uploads/python.jpeg" alt="" class="featured-image-post">
+    <h1 class="post-title p-name" itemprop="name headline">Python</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2024-03-26T11:35:09+01:00" itemprop="datePublished">
+        Mar 26, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="note-python">Note python</h1>
+
+<p>Lister attribut d’un objet :</p>
+
+<p>print(dir(object.it)
+Pour lister tous les attributs</p>
+
+<p>for att in dir(issue):
+print (att, getattr(issue,att))
+print(dir(object.attr))</p>
+
+<pre>
+```python
+import requests
+import pandas as pd
+from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
+
+cities = [
+    ["Kyiv", "Ukraine"],
+    ["Warsaw", "Poland"],
+    ["Berlin", "Germany"],
+    ["London", "UK"],
+    ["Madrid", "Spain"],
+    ["Paris", "France"],
+    ["Rome", "Italy"],
+    ["Prague", "Czechia"],
+    ["Istanbul", "Turkey"],
+    ["Stockholm", "Sweden"],
+    ["Sofia", "Bulgaria"],
+    ["Bucharest", "Romania"],
+    ["Zurich", "Switzerland"],
+]
+
+df = pd.DataFrame(cities, columns=["city", "country"])
+
+locator = Nominatim(user_agent="Edodou")
+geocode = RateLimiter(locator.geocode, min_delay_seconds=.1)
+
+def get_coordinates(city, country):
+  response = geocode(query={"city": city, "country": country})
+  return {
+    "latitude": response.latitude,
+    "longitude": response.longitude
+  }
+
+df_coordinates = df.apply(lambda x: get_coordinates(x.city, x.country), axis=1)
+df = pd.concat([df, pd.json_normalize(df_coordinates)], axis=1)
+
+print(df)
+
+from getpass import getpass
+openweathermap_api_key = getpass('Enter Openweathermap API key: ')
+
+import datetime
+
+def get_weather(row):
+
+  owm_url = f"https://api.openweathermap.org/data/2.5/weather?lat={row.latitude}&amp;lon={row.longitude}&amp;appid={openweathermap_api_key}"
+  owm_response = requests.get(owm_url)
+  owm_response_json = owm_response.json()
+  sunset_utc = datetime.datetime.fromtimestamp(owm_response_json["sys"]["sunset"])
+  return {
+      "temp": owm_response_json["main"]["temp"] - 273.15,
+      "description": owm_response_json["weather"][0]["description"],
+      "icon": owm_response_json["weather"][0]["icon"],
+      "sunset_utc": sunset_utc,
+      "sunset_local": sunset_utc + datetime.timedelta(seconds=owm_response_json["timezone"])
+  }
+
+df_weather = df.apply(lambda x: get_weather(x), axis=1)
+df = pd.concat([df, pd.json_normalize(df_weather)], axis=1)
+
+print(df)
+import geopandas as gpd
+# try:
+#   import geopandas as gpd
+# except ModuleNotFoundError:
+#   if 'google.colab' in str(get_ipython()):
+#     pip install geopandas
+#   import geopandas as gpd
+import contextily as ctx
+# try:
+#   import contextily as ctx
+# except ModuleNotFoundError:
+#   if 'google.colab' in str(get_ipython()):
+#     %pip install contextily
+#   import contextily as ctx
+
+gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.longitude, df.latitude), crs=4326)
+
+from skimage import io
+import matplotlib.pyplot as plt
+from matplotlib.offsetbox import AnnotationBbox, OffsetImage  
+
+# plot city location marker
+ax = gdf.to_crs(epsg=3857).plot(figsize=(12,8), color="black")
+
+# add weather icon
+def add_icon(row):
+  img = io.imread(f"https://openweathermap.org/img/wn/{row.icon}@2x.png")
+  img_offset = OffsetImage(img, zoom=.4, alpha=1, )
+  ab = AnnotationBbox(img_offset, [row.geometry.x+150000, row.geometry.y-110000], frameon=False)
+  ax.add_artist(ab)
+
+gdf.to_crs(epsg=3857).apply(add_icon, axis=1)
+
+# add city name label
+gdf.to_crs(epsg=3857).apply(lambda x: ax.annotate(text=f"{x.city}  ", fontsize=10, color="black", xy=x.geometry.centroid.coords[0], ha='right'), axis=1);
+
+# add temperature
+gdf.to_crs(epsg=3857).apply(lambda x: ax.annotate(text=f" {round(x.temp)}°", fontsize=15, color="black", xy=x.geometry.centroid.coords[0], ha='left'), axis=1);
+
+# add margins
+xmin, ymin, xmax, ymax = gdf.to_crs(epsg=3857).total_bounds
+margin_y = .2
+margin_x = .2
+y_margin = (ymax - ymin) * margin_y
+x_margin = (xmax - xmin) * margin_x
+
+ax.set_xlim(xmin - x_margin, xmax + x_margin)
+ax.set_ylim(ymin - y_margin, ymax + y_margin)
+
+# add basemap
+ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik)
+# print(dir(ctx.providers.Stadia))
+ax.set_axis_off()
+plt.show()
+```
+</pre>
+
+  </div><a class="u-url" href="/python/" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Denverledinosor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Denverledinosor</li><li><a class="u-email" href="mailto:denverledinosor@protonmail.com">denverledinosor@protonmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/denverledinosor"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">denverledinosor</span></a></li><li><a href="https://www.twitter.com/denverledinosor"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">denverledinosor</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Ce blog est à moi</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

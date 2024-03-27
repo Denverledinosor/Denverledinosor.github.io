@@ -1,48 +1,290 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-03-27T09:38:23+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">Lexique</title><link href="http://localhost:4000/lexique/" rel="alternate" type="text/html" title="Lexique" /><published>2023-12-20T10:35:09+01:00</published><updated>2023-12-20T10:35:09+01:00</updated><id>http://localhost:4000/Lexique</id><content type="html" xml:base="http://localhost:4000/lexique/">&lt;h1 id=&quot;lexique&quot;&gt;Lexique&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-03-27T11:46:28+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">Un peu de cryptographie</title><link href="http://localhost:4000/cryptographie/" rel="alternate" type="text/html" title="Un peu de cryptographie" /><published>2024-03-27T10:45:09+01:00</published><updated>2024-03-27T10:45:09+01:00</updated><id>http://localhost:4000/Cryptographie</id><content type="html" xml:base="http://localhost:4000/cryptographie/">&lt;h1 id=&quot;quest-ce-que-la-cryptographie&quot;&gt;Qu’est-ce que la cryptographie&lt;/h1&gt;
+&lt;pre&gt;
+C&apos;est une étude de la sécurisation des communications répondant au besoin de sécurités : 
+-confidentialité
+-intégrité
+-authenticité 
+-non répudiation
+&lt;/pre&gt;
+&lt;p&gt;Nous retrouvons de la cryptographie un peu partout : 
+Dans les télécommunications : (mails, navigation internet, téléphonie, messagerie,)
+Dans le controle d’accès : (clé de déverouillage, badge de porte ou d’immeuble, passeport, CNI même décodeur TV)
+Bien-sur dans les systèmes de paiements : (cartes bancaires, cryptomonnaies)&lt;/p&gt;
+&lt;h1 id=&quot;principe-de-kerchoffs&quot;&gt;Principe de Kerchoffs&lt;/h1&gt;
+&lt;p&gt;La robustesse d’un système cryptographique ne doit pas reposer sur le secret de son algorithme, mais sur le secret de la clé utilisé&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Qu’est-ce que la cryptographie C&apos;est une étude de la sécurisation des communications répondant au besoin de sécurités : -confidentialité -intégrité -authenticité -non répudiation Nous retrouvons de la cryptographie un peu partout : Dans les télécommunications : (mails, navigation internet, téléphonie, messagerie,) Dans le controle d’accès : (clé de déverouillage, badge de porte ou d’immeuble, passeport, CNI même décodeur TV) Bien-sur dans les systèmes de paiements : (cartes bancaires, cryptomonnaies) Principe de Kerchoffs La robustesse d’un système cryptographique ne doit pas reposer sur le secret de son algorithme, mais sur le secret de la clé utilisé</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/cryptographie.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/cryptographie.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Un peu de wifi</title><link href="http://localhost:4000/wifi/" rel="alternate" type="text/html" title="Un peu de wifi" /><published>2024-03-27T10:35:09+01:00</published><updated>2024-03-27T10:35:09+01:00</updated><id>http://localhost:4000/Un%20peu%20de%20wifi</id><content type="html" xml:base="http://localhost:4000/wifi/">&lt;h1 id=&quot;liens-et-documentations&quot;&gt;Liens et documentations&lt;/h1&gt;
+&lt;pre&gt;
 
-&lt;p&gt;ANSSI = Agence Nationale de la Sécurité des Systèmes d’Information
+https://www.canardwifi.com/2017/08/15/faille-de-securite-wps-critique-sur-les-livebox-et-box-sfr/
+
+https://www.macg.co/materiel/2017/08/une-faille-de-securite-avec-le-wps-dans-les-box-orange-et-sfr-99409
+
+https://lafibre.info/attaques/faille-de-securite-wifi-wps-chez-sfr-et-orange/
+
+[https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.canardwifi.com%2Fwp-content%2Fcwuploads%2Ffaille-wps-pin-null-script-boxon.png&amp;amp;tbnid=UskTM2MZQvBhEM&amp;amp;vet=12ahUKEwiWjaDfvfWCAxX5sCcCHRWxCHgQMygTegQIARBY..i&amp;amp;imgrefurl=https%3A%2F%2Fwww.canardwifi.com%2F2017%2F08%2F15%2Ffaille-de-securite-wps-critique-sur-les-livebox-et-box-sfr%2F&amp;amp;docid=4_8l8CSduxFYgM&amp;amp;w=909&amp;amp;h=459&amp;amp;q=null pin wps&amp;amp;ved=2ahUKEwiWjaDfvfWCAxX5sCcCHRWxCHgQMygTegQIARBY](https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.canardwifi.com%2Fwp-content%2Fcwuploads%2Ffaille-wps-pin-null-script-boxon.png&amp;amp;tbnid=UskTM2MZQvBhEM&amp;amp;vet=12ahUKEwiWjaDfvfWCAxX5sCcCHRWxCHgQMygTegQIARBY..i&amp;amp;imgrefurl=https%3A%2F%2Fwww.canardwifi.com%2F2017%2F08%2F15%2Ffaille-de-securite-wps-critique-sur-les-livebox-et-box-sfr%2F&amp;amp;docid=4_8l8CSduxFYgM&amp;amp;w=909&amp;amp;h=459&amp;amp;q=null%20pin%20wps&amp;amp;ved=2ahUKEwiWjaDfvfWCAxX5sCcCHRWxCHgQMygTegQIARBY)
+
+https://null-byte.wonderhowto.com/how-to/hack-wi-fi-selecting-good-wi-fi-hacking-strategy-0162526/
+
+https://null-byte.wonderhowto.com/how-to/automate-wi-fi-hacking-with-wifite2-0191739/
+
+https://www.wonderhowto.com/search/reaver/
+&lt;/pre&gt;
+
+&lt;h1 id=&quot;comment-faire-une-super-attaque-null-pin&quot;&gt;Comment faire une super attaque Null Pin&lt;/h1&gt;
+
+&lt;p&gt;Une attaque Null Pin est un type d’attaque Wifi qui concerne plus particulièrement l’authentification WPS des boxs (box ou routeur personnel seront synonyme ici).&lt;/p&gt;
+
+&lt;p&gt;Souvent oubliés, dans certains cas mis à jour et dans la majorité non-désactivé le WPS permet une authentification sur la box plus simple sans passer par le protocole&lt;/p&gt;
+
+&lt;p&gt;WPA. Ce qui veut dire pas de WPA handshake et pas de mot de passe à ralonge. Il s’agit souvent d’appuyer sur un bouton de la box pour autoriser l’authentification de&lt;/p&gt;
+
+&lt;p&gt;n’importe quel appareil à proximité. Mais il existe aussi d’autre méthode :&lt;/p&gt;
+
+&lt;p&gt;la méthode PIN (Personal Identification Number), un numéro à lire sur une étiquette (ou un écran) du nouvel appareil, et à reporter sur le « représentant » du réseau 
+(le point d’accès ou le registraire) ;&lt;/p&gt;
+
+&lt;p&gt;la méthode PBC (Push Button Configuration), où l’utilisateur presse un bouton (physique ou virtuel), à la fois sur le point d’accès et sur le nouvel appareil ;&lt;/p&gt;
+
+&lt;p&gt;la méthode NFC (Near Field Communication), où l’utilisateur approche le nouvel appareil du point d’accès pour établir une communication en champ proche entre eux ;&lt;/p&gt;
+
+&lt;p&gt;la méthode USB (Universal Serial Bus, comme D-link le fait pour la plupart des clés USB wifi), où l’utilisateur se sert d’une clé USB pour transférer les données entre 
+le nouvel appareil et le point d’accès.&lt;/p&gt;
+
+&lt;p&gt;Ainsi la méthode PIN est bien souvent vulnerable et attaquée. La méthode Null Pin consiste à envoyer un PIN null (“”) et pour cela on va utiliser l’outil Reaver&lt;/p&gt;
+&lt;pre&gt;
+Wifi:
+
+Null pin :
+
+---
+
+Ifconfig wlan1 down
+
+Iwconfig wlan1 mode monitor
+
+Ifconfig wlan1 up
+
+Wash -i wlan1
+
+reaver -b 07:22:56:24:13:29 -i wlan1 -p “”
+&lt;/pre&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Liens et documentations</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/wifi.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/wifi.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Python</title><link href="http://localhost:4000/python/" rel="alternate" type="text/html" title="Python" /><published>2024-03-26T11:35:09+01:00</published><updated>2024-03-26T11:35:09+01:00</updated><id>http://localhost:4000/Python</id><content type="html" xml:base="http://localhost:4000/python/">&lt;h1 id=&quot;note-python&quot;&gt;Note python&lt;/h1&gt;
+
+&lt;p&gt;Lister attribut d’un objet :&lt;/p&gt;
+
+&lt;p&gt;print(dir(object.it)
+Pour lister tous les attributs&lt;/p&gt;
+
+&lt;p&gt;for att in dir(issue):
+print (att, getattr(issue,att))
+print(dir(object.attr))&lt;/p&gt;
+
+&lt;pre&gt;
+```python
+import requests
+import pandas as pd
+from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
+
+cities = [
+    [&quot;Kyiv&quot;, &quot;Ukraine&quot;],
+    [&quot;Warsaw&quot;, &quot;Poland&quot;],
+    [&quot;Berlin&quot;, &quot;Germany&quot;],
+    [&quot;London&quot;, &quot;UK&quot;],
+    [&quot;Madrid&quot;, &quot;Spain&quot;],
+    [&quot;Paris&quot;, &quot;France&quot;],
+    [&quot;Rome&quot;, &quot;Italy&quot;],
+    [&quot;Prague&quot;, &quot;Czechia&quot;],
+    [&quot;Istanbul&quot;, &quot;Turkey&quot;],
+    [&quot;Stockholm&quot;, &quot;Sweden&quot;],
+    [&quot;Sofia&quot;, &quot;Bulgaria&quot;],
+    [&quot;Bucharest&quot;, &quot;Romania&quot;],
+    [&quot;Zurich&quot;, &quot;Switzerland&quot;],
+]
+
+df = pd.DataFrame(cities, columns=[&quot;city&quot;, &quot;country&quot;])
+
+locator = Nominatim(user_agent=&quot;Edodou&quot;)
+geocode = RateLimiter(locator.geocode, min_delay_seconds=.1)
+
+def get_coordinates(city, country):
+  response = geocode(query={&quot;city&quot;: city, &quot;country&quot;: country})
+  return {
+    &quot;latitude&quot;: response.latitude,
+    &quot;longitude&quot;: response.longitude
+  }
+
+df_coordinates = df.apply(lambda x: get_coordinates(x.city, x.country), axis=1)
+df = pd.concat([df, pd.json_normalize(df_coordinates)], axis=1)
+
+print(df)
+
+from getpass import getpass
+openweathermap_api_key = getpass(&apos;Enter Openweathermap API key: &apos;)
+
+import datetime
+
+def get_weather(row):
+
+  owm_url = f&quot;https://api.openweathermap.org/data/2.5/weather?lat={row.latitude}&amp;amp;lon={row.longitude}&amp;amp;appid={openweathermap_api_key}&quot;
+  owm_response = requests.get(owm_url)
+  owm_response_json = owm_response.json()
+  sunset_utc = datetime.datetime.fromtimestamp(owm_response_json[&quot;sys&quot;][&quot;sunset&quot;])
+  return {
+      &quot;temp&quot;: owm_response_json[&quot;main&quot;][&quot;temp&quot;] - 273.15,
+      &quot;description&quot;: owm_response_json[&quot;weather&quot;][0][&quot;description&quot;],
+      &quot;icon&quot;: owm_response_json[&quot;weather&quot;][0][&quot;icon&quot;],
+      &quot;sunset_utc&quot;: sunset_utc,
+      &quot;sunset_local&quot;: sunset_utc + datetime.timedelta(seconds=owm_response_json[&quot;timezone&quot;])
+  }
+
+df_weather = df.apply(lambda x: get_weather(x), axis=1)
+df = pd.concat([df, pd.json_normalize(df_weather)], axis=1)
+
+print(df)
+import geopandas as gpd
+# try:
+#   import geopandas as gpd
+# except ModuleNotFoundError:
+#   if &apos;google.colab&apos; in str(get_ipython()):
+#     pip install geopandas
+#   import geopandas as gpd
+import contextily as ctx
+# try:
+#   import contextily as ctx
+# except ModuleNotFoundError:
+#   if &apos;google.colab&apos; in str(get_ipython()):
+#     %pip install contextily
+#   import contextily as ctx
+
+gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.longitude, df.latitude), crs=4326)
+
+from skimage import io
+import matplotlib.pyplot as plt
+from matplotlib.offsetbox import AnnotationBbox, OffsetImage  
+
+# plot city location marker
+ax = gdf.to_crs(epsg=3857).plot(figsize=(12,8), color=&quot;black&quot;)
+
+# add weather icon
+def add_icon(row):
+  img = io.imread(f&quot;https://openweathermap.org/img/wn/{row.icon}@2x.png&quot;)
+  img_offset = OffsetImage(img, zoom=.4, alpha=1, )
+  ab = AnnotationBbox(img_offset, [row.geometry.x+150000, row.geometry.y-110000], frameon=False)
+  ax.add_artist(ab)
+
+gdf.to_crs(epsg=3857).apply(add_icon, axis=1)
+
+# add city name label
+gdf.to_crs(epsg=3857).apply(lambda x: ax.annotate(text=f&quot;{x.city}  &quot;, fontsize=10, color=&quot;black&quot;, xy=x.geometry.centroid.coords[0], ha=&apos;right&apos;), axis=1);
+
+# add temperature
+gdf.to_crs(epsg=3857).apply(lambda x: ax.annotate(text=f&quot; {round(x.temp)}°&quot;, fontsize=15, color=&quot;black&quot;, xy=x.geometry.centroid.coords[0], ha=&apos;left&apos;), axis=1);
+
+# add margins
+xmin, ymin, xmax, ymax = gdf.to_crs(epsg=3857).total_bounds
+margin_y = .2
+margin_x = .2
+y_margin = (ymax - ymin) * margin_y
+x_margin = (xmax - xmin) * margin_x
+
+ax.set_xlim(xmin - x_margin, xmax + x_margin)
+ax.set_ylim(ymin - y_margin, ymax + y_margin)
+
+# add basemap
+ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik)
+# print(dir(ctx.providers.Stadia))
+ax.set_axis_off()
+plt.show()
+```
+&lt;/pre&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Note python</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/python.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/python.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lexique</title><link href="http://localhost:4000/lexique/" rel="alternate" type="text/html" title="Lexique" /><published>2023-12-20T10:35:09+01:00</published><updated>2023-12-20T10:35:09+01:00</updated><id>http://localhost:4000/Lexique</id><content type="html" xml:base="http://localhost:4000/lexique/">&lt;h1 id=&quot;lexique&quot;&gt;Lexique&lt;/h1&gt;
+&lt;pre&gt;
+
+ANSSI = Agence Nationale de la Sécurité des Systèmes d&apos;Information
+
 ATE = Assistance Technique Externalisée
+
 ATG = Assistance Technique Globalisée
+
 CAB : Change Advisory Board, Comité des Changements
+
 CASB : Cloud AcessSecurity Broker
+
 CC = Cahier Des Charges
+
 CDC = Centre De Compétences
+
 CDR = Centre De Ressources
-CNIL = Commission Nationale de l’Informatique et des Libertés
+
+CNIL = Commission Nationale de l&apos;Informatique et des Libertés
+
 CR = Compte-Rendu
+
 CSA : Cloud Security Alliance
+
 CSM : Comité de Sécurité Mandataire
+
 DES : Document d’Exigences Sécurité
+
 DSI : Direction des Systèmes d’Information
+
 ELK : ELK Stack : Elasticsearch, Logstash, Kibana, (outil de centralisation des journaux)
+
 FP = Fiche de Processus
+
 IAM : Identity Access Management
+
 IPS : Intrusion Prevention System, système de blocage des intrusions
+
 IQ = Indicateurs Qualité
+
 MOE : Maîtrise d’Œuvre
+
 NIST = National Institute of Standards and Technology
+
 OSSTMM= Open Source Security Testing Methodology Manual
+
 OWASP = Open Web Application Security Project
+
 PAQ = Plan d’assurance Qualité
+
 PAS = Plan d’assurance Sécurité
+
 PSSI = Politique de Sécurité du Système d’Information
+
 PTES = Penetration Testing Execution Standard
+
 PTF = Penetration Testing Framework
+
 PV = Procès-Verbal
+
 RAF = Reste à Faire
+
 RH = Ressources Humaines
+
 RMM : Remote Monitoring Management
+
 SI :Système d’Information
+
 SIEM:Security Information Event Management
+
 SMB = Server Message Block
+
 SMSI : System de Management Securité Information
+
 SMTP = Simple Mail Transfer Protocol
+
 SNMP = Simple Network Management Protocol
+
 SOAR : Security Orchestration, Automation and Response
+
 SOC :Security Operations Center
+
 SSI = Sécurité du Système d’Information
+
 UCAAS : Unified Communications As A Service
-UX : User Experience&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Lexique</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/lexique.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/lexique.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nuclei</title><link href="http://localhost:4000/nuclei/" rel="alternate" type="text/html" title="Nuclei" /><published>2023-12-20T09:35:09+01:00</published><updated>2023-12-20T09:35:09+01:00</updated><id>http://localhost:4000/Nuclei</id><content type="html" xml:base="http://localhost:4000/nuclei/">&lt;h1 id=&quot;nuclei&quot;&gt;Nuclei&lt;/h1&gt;
+
+UX : User Experience
+
+&lt;/pre&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Lexique</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/lexique.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/lexique.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nuclei</title><link href="http://localhost:4000/nuclei/" rel="alternate" type="text/html" title="Nuclei" /><published>2023-12-20T09:35:09+01:00</published><updated>2023-12-20T09:35:09+01:00</updated><id>http://localhost:4000/Nuclei</id><content type="html" xml:base="http://localhost:4000/nuclei/">&lt;h1 id=&quot;nuclei&quot;&gt;Nuclei&lt;/h1&gt;
 &lt;p&gt;[Veille du MISC Janv/Fev]&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Nuclei tool&lt;/strong&gt; un outil pour l’automatisation de reconnaisse web :https://github.com/projectdiscovery/nuclei&lt;/p&gt;
@@ -63,8 +305,6 @@ UX : User Experience&lt;/p&gt;</content><author><name></name></author><category 
 &lt;p&gt;nuclei -t technologies/tech-detect.yaml -u https://denverledinosor.fr&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://prod-files-secure.s3.us-west-2.amazonaws.com/3192903a-1f17-466c-8aea-7276980cf01c/81fd73a3-e2b4-4b5e-b55e-df5be4690b75/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.notion.so/Template-XSS-ca890ac63d28439a9a642c4893ec7051?pvs=21&quot;&gt;Template XSS&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;nuclei -update&lt;/p&gt;
 
