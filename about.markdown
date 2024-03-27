@@ -1,8 +1,10 @@
 ---
-layout: page
+layout: base
 title: À propos de Denverledinosor.fr
 permalink: /about/
 ---
+
+# À propos de Denverledinosor.fr
 
 Salut ! Moi c'est Jaouen
 
