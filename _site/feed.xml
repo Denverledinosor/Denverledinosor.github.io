@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-03-27T09:34:18+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">XSS Master Race</title><link href="http://localhost:4000/xss/" rel="alternate" type="text/html" title="XSS Master Race" /><published>2023-10-24T08:35:09+02:00</published><updated>2023-10-24T08:35:09+02:00</updated><id>http://localhost:4000/XSS%20master%20race</id><content type="html" xml:base="http://localhost:4000/xss/">&lt;h1 id=&quot;postxss&quot;&gt;PostXSS&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-03-27T09:38:23+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">Lexique</title><link href="http://localhost:4000/lexique/" rel="alternate" type="text/html" title="Lexique" /><published>2023-12-20T10:35:09+01:00</published><updated>2023-12-20T10:35:09+01:00</updated><id>http://localhost:4000/Lexique</id><content type="html" xml:base="http://localhost:4000/lexique/">&lt;h1 id=&quot;lexique&quot;&gt;Lexique&lt;/h1&gt;
+
+&lt;p&gt;ANSSI = Agence Nationale de la Sécurité des Systèmes d’Information
+ATE = Assistance Technique Externalisée
+ATG = Assistance Technique Globalisée
+CAB : Change Advisory Board, Comité des Changements
+CASB : Cloud AcessSecurity Broker
+CC = Cahier Des Charges
+CDC = Centre De Compétences
+CDR = Centre De Ressources
+CNIL = Commission Nationale de l’Informatique et des Libertés
+CR = Compte-Rendu
+CSA : Cloud Security Alliance
+CSM : Comité de Sécurité Mandataire
+DES : Document d’Exigences Sécurité
+DSI : Direction des Systèmes d’Information
+ELK : ELK Stack : Elasticsearch, Logstash, Kibana, (outil de centralisation des journaux)
+FP = Fiche de Processus
+IAM : Identity Access Management
+IPS : Intrusion Prevention System, système de blocage des intrusions
+IQ = Indicateurs Qualité
+MOE : Maîtrise d’Œuvre
+NIST = National Institute of Standards and Technology
+OSSTMM= Open Source Security Testing Methodology Manual
+OWASP = Open Web Application Security Project
+PAQ = Plan d’assurance Qualité
+PAS = Plan d’assurance Sécurité
+PSSI = Politique de Sécurité du Système d’Information
+PTES = Penetration Testing Execution Standard
+PTF = Penetration Testing Framework
+PV = Procès-Verbal
+RAF = Reste à Faire
+RH = Ressources Humaines
+RMM : Remote Monitoring Management
+SI :Système d’Information
+SIEM:Security Information Event Management
+SMB = Server Message Block
+SMSI : System de Management Securité Information
+SMTP = Simple Mail Transfer Protocol
+SNMP = Simple Network Management Protocol
+SOAR : Security Orchestration, Automation and Response
+SOC :Security Operations Center
+SSI = Sécurité du Système d’Information
+UCAAS : Unified Communications As A Service
+UX : User Experience&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Lexique</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/lexique.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/lexique.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Nuclei</title><link href="http://localhost:4000/nuclei/" rel="alternate" type="text/html" title="Nuclei" /><published>2023-12-20T09:35:09+01:00</published><updated>2023-12-20T09:35:09+01:00</updated><id>http://localhost:4000/Nuclei</id><content type="html" xml:base="http://localhost:4000/nuclei/">&lt;h1 id=&quot;nuclei&quot;&gt;Nuclei&lt;/h1&gt;
+&lt;p&gt;[Veille du MISC Janv/Fev]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nuclei tool&lt;/strong&gt; un outil pour l’automatisation de reconnaisse web :https://github.com/projectdiscovery/nuclei&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nuclei fonctionne avec un système de template provenant de la communauté (possibilité d’utiliser ses propres templates)&lt;/li&gt;
+  &lt;li&gt;Développé en GO, les configurations/templates se font en YAML&lt;/li&gt;
+  &lt;li&gt;On peut notamment avoir des templates pour de la reconnaissance JS&lt;/li&gt;
+  &lt;li&gt;Navigation à travers le site type selenium : par exemple il est possible de naviguer sur une page spécifique et de rechercher un Xpath ou une connexion/socket.&lt;/li&gt;
+  &lt;li&gt;Il est possible de lancer plusieurs template en même temps.&lt;/li&gt;
+  &lt;li&gt;L’outil ne recherche pas de vulnérabilité de spécifique. Tout dépend de la template utilisée.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Liste de template : https://github.com/projectdiscovery/nuclei-templates&lt;/p&gt;
+
+&lt;p&gt;Voici un exemple d’utilisation succinct, la template vient faire un scan des services utilisés (grâce à du regex) :&lt;/p&gt;
+
+&lt;p&gt;nuclei -t technologies/tech-detect.yaml -u https://denverledinosor.fr&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://prod-files-secure.s3.us-west-2.amazonaws.com/3192903a-1f17-466c-8aea-7276980cf01c/81fd73a3-e2b4-4b5e-b55e-df5be4690b75/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.notion.so/Template-XSS-ca890ac63d28439a9a642c4893ec7051?pvs=21&quot;&gt;Template XSS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;nuclei -update&lt;/p&gt;
+
+&lt;p&gt;nuclei -ut&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Nuclei [Veille du MISC Janv/Fev]</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/nuclei.png" /><media:content medium="image" url="http://localhost:4000/assets/uploads/nuclei.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Quantic Post</title><link href="http://localhost:4000/quantic/" rel="alternate" type="text/html" title="Quantic Post" /><published>2023-12-20T07:35:09+01:00</published><updated>2023-12-20T07:35:09+01:00</updated><id>http://localhost:4000/quantic</id><content type="html" xml:base="http://localhost:4000/quantic/">&lt;h1 id=&quot;quantic&quot;&gt;Quantic&lt;/h1&gt;
+
+&lt;p&gt;La physique quantique est une branche fascinante de la science qui étudie le comportement des particules subatomiques et les interactions fondamentales de l’univers. Elle remet en question notre compréhension classique de la réalité et nous fait découvrir un monde étonnant où la superposition, l’interférence et l’intrication règnent en maître. La physique quantique a des applications dans de nombreux domaines, tels que l’informatique quantique, la cryptographie quantique et la médecine quantique. Elle continue de repousser les limites de notre connaissance et de nous offrir de nouvelles perspectives sur la nature de l’univers.&lt;/p&gt;
+
+&lt;p&gt;:::&lt;/p&gt;
+
+&lt;p&gt;Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle&lt;/p&gt;
+
+&lt;p&gt;Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare&lt;/p&gt;
+
+&lt;p&gt;Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle&lt;/p&gt;
+
+&lt;p&gt;Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare&lt;/p&gt;
+
+&lt;p&gt;https://fr.wikipedia.org/wiki/Cryptographie_quantique&lt;/p&gt;
+
+&lt;p&gt;https://fr.wikipedia.org/wiki/Cryptographie_post-quantique&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://fr.wikipedia.org/wiki/Th%C3%A9orie_de_l%27information&quot;&gt;https://fr.wikipedia.org/wiki/Théorie_de_l’information&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;China’s quantum satellite clears major hurdle on way to ultrasecure communications&lt;/p&gt;
+
+&lt;p&gt;Sycamore&lt;/p&gt;
+
+&lt;p&gt;Protocole BB84&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Quantic</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/logo.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">XSS Master Race</title><link href="http://localhost:4000/xss/" rel="alternate" type="text/html" title="XSS Master Race" /><published>2023-10-24T08:35:09+02:00</published><updated>2023-10-24T08:35:09+02:00</updated><id>http://localhost:4000/XSS%20master%20race</id><content type="html" xml:base="http://localhost:4000/xss/">&lt;h1 id=&quot;postxss&quot;&gt;PostXSS&lt;/h1&gt;
 
 &lt;p&gt;Hi everyone it’s Denverledinosor and welcome to this new post about XSS&lt;/p&gt;
 
@@ -42,19 +136,7 @@ carry out things on the site that were not initially planned. Look
 errors are therefore essential.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;https://0xhorizon.eu/fr/articles/xss-dom-based/&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">PostXSS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/xss.png" /><media:content medium="image" url="http://localhost:4000/assets/uploads/xss.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Quantic Post</title><link href="http://localhost:4000/quantic/" rel="alternate" type="text/html" title="Quantic Post" /><published>2023-10-19T08:35:09+02:00</published><updated>2023-10-19T08:35:09+02:00</updated><id>http://localhost:4000/quantic</id><content type="html" xml:base="http://localhost:4000/quantic/">&lt;h1 id=&quot;quantic&quot;&gt;Quantic&lt;/h1&gt;
-
-&lt;p&gt;La physique quantique est une branche fascinante de la science qui étudie le comportement des particules subatomiques et les interactions fondamentales de l’univers. Elle remet en question notre compréhension classique de la réalité et nous fait découvrir un monde étonnant où la superposition, l’interférence et l’intrication règnent en maître. La physique quantique a des applications dans de nombreux domaines, tels que l’informatique quantique, la cryptographie quantique et la médecine quantique. Elle continue de repousser les limites de notre connaissance et de nous offrir de nouvelles perspectives sur la nature de l’univers.&lt;/p&gt;
-
-&lt;p&gt;:::&lt;/p&gt;
-
-&lt;p&gt;Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle&lt;/p&gt;
-
-&lt;p&gt;Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare&lt;/p&gt;
-
-&lt;p&gt;Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle&lt;/p&gt;
-
-&lt;p&gt;Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Quantic</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/logo.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/logo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-10-18T15:06:09+02:00</published><updated>2023-10-18T15:06:09+02:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">PostXSS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/xss.png" /><media:content medium="image" url="http://localhost:4000/assets/uploads/xss.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-10-18T15:06:09+02:00</published><updated>2023-10-18T15:06:09+02:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 

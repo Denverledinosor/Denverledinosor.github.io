@@ -3,23 +3,23 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Quantic Post | Denverledinosor</title>
+<title>Nuclei | Denverledinosor</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Quantic Post" />
+<meta property="og:title" content="Nuclei" />
 <meta property="og:locale" content="fr_FR" />
-<meta name="description" content="Quantic" />
-<meta property="og:description" content="Quantic" />
-<link rel="canonical" href="http://localhost:4000/quantic/" />
-<meta property="og:url" content="http://localhost:4000/quantic/" />
+<meta name="description" content="Nuclei [Veille du MISC Janv/Fev]" />
+<meta property="og:description" content="Nuclei [Veille du MISC Janv/Fev]" />
+<link rel="canonical" href="http://localhost:4000/nuclei/" />
+<meta property="og:url" content="http://localhost:4000/nuclei/" />
 <meta property="og:site_name" content="Denverledinosor" />
-<meta property="og:image" content="http://localhost:4000/assets/uploads/logo.jpg" />
+<meta property="og:image" content="http://localhost:4000/assets/uploads/nuclei.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-12-20T07:35:09+01:00" />
+<meta property="article:published_time" content="2023-12-20T09:35:09+01:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/uploads/logo.jpg" />
-<meta property="twitter:title" content="Quantic Post" />
+<meta property="twitter:image" content="http://localhost:4000/assets/uploads/nuclei.png" />
+<meta property="twitter:title" content="Nuclei" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-20T07:35:09+01:00","datePublished":"2023-12-20T07:35:09+01:00","description":"Quantic","headline":"Quantic Post","image":"http://localhost:4000/assets/uploads/logo.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/quantic/"},"url":"http://localhost:4000/quantic/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-20T09:35:09+01:00","datePublished":"2023-12-20T09:35:09+01:00","description":"Nuclei [Veille du MISC Janv/Fev]","headline":"Nuclei","image":"http://localhost:4000/assets/uploads/nuclei.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nuclei/"},"url":"http://localhost:4000/nuclei/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Denverledinosor" /></head>
 <body><header class="site-header" role="banner">
@@ -42,41 +42,43 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <img src="/assets/uploads/logo.jpg" alt="" class="featured-image-post">
-    <h1 class="post-title p-name" itemprop="name headline">Quantic Post</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2023-12-20T07:35:09+01:00" itemprop="datePublished">
+    <img src="/assets/uploads/nuclei.png" alt="" class="featured-image-post">
+    <h1 class="post-title p-name" itemprop="name headline">Nuclei</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-12-20T09:35:09+01:00" itemprop="datePublished">
         Dec 20, 2023
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="quantic">Quantic</h1>
+    <h1 id="nuclei">Nuclei</h1>
+<p>[Veille du MISC Janv/Fev]</p>
 
-<p>La physique quantique est une branche fascinante de la science qui étudie le comportement des particules subatomiques et les interactions fondamentales de l’univers. Elle remet en question notre compréhension classique de la réalité et nous fait découvrir un monde étonnant où la superposition, l’interférence et l’intrication règnent en maître. La physique quantique a des applications dans de nombreux domaines, tels que l’informatique quantique, la cryptographie quantique et la médecine quantique. Elle continue de repousser les limites de notre connaissance et de nous offrir de nouvelles perspectives sur la nature de l’univers.</p>
+<p><strong>Nuclei tool</strong> un outil pour l’automatisation de reconnaisse web :https://github.com/projectdiscovery/nuclei</p>
 
-<p>:::</p>
+<ul>
+  <li>Nuclei fonctionne avec un système de template provenant de la communauté (possibilité d’utiliser ses propres templates)</li>
+  <li>Développé en GO, les configurations/templates se font en YAML</li>
+  <li>On peut notamment avoir des templates pour de la reconnaissance JS</li>
+  <li>Navigation à travers le site type selenium : par exemple il est possible de naviguer sur une page spécifique et de rechercher un Xpath ou une connexion/socket.</li>
+  <li>Il est possible de lancer plusieurs template en même temps.</li>
+  <li>L’outil ne recherche pas de vulnérabilité de spécifique. Tout dépend de la template utilisée.</li>
+</ul>
 
-<p>Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle</p>
+<p>Liste de template : https://github.com/projectdiscovery/nuclei-templates</p>
 
-<p>Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare</p>
+<p>Voici un exemple d’utilisation succinct, la template vient faire un scan des services utilisés (grâce à du regex) :</p>
 
-<p>Effondrement de la fonction d’onde lorsque la fonction probabiliste est non fonctionnelle</p>
+<p>nuclei -t technologies/tech-detect.yaml -u https://denverledinosor.fr</p>
 
-<p>Intrication quantique changement de l’état de deux particules d’un système quelle que soit la distance qui les sépare</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/3192903a-1f17-466c-8aea-7276980cf01c/81fd73a3-e2b4-4b5e-b55e-df5be4690b75/Untitled.png" alt="Untitled" /></p>
 
-<p>https://fr.wikipedia.org/wiki/Cryptographie_quantique</p>
+<p><a href="https://www.notion.so/Template-XSS-ca890ac63d28439a9a642c4893ec7051?pvs=21">Template XSS</a></p>
 
-<p>https://fr.wikipedia.org/wiki/Cryptographie_post-quantique</p>
+<p>nuclei -update</p>
 
-<p><a href="https://fr.wikipedia.org/wiki/Th%C3%A9orie_de_l%27information">https://fr.wikipedia.org/wiki/Théorie_de_l’information</a></p>
+<p>nuclei -ut</p>
 
-<p>China’s quantum satellite clears major hurdle on way to ultrasecure communications</p>
-
-<p>Sycamore</p>
-
-<p>Protocole BB84</p>
-
-  </div><a class="u-url" href="/quantic/" hidden></a>
+  </div><a class="u-url" href="/nuclei/" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
