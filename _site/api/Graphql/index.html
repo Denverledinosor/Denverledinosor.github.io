@@ -12,14 +12,12 @@
 <link rel="canonical" href="http://localhost:4000/api/Graphql/" />
 <meta property="og:url" content="http://localhost:4000/api/Graphql/" />
 <meta property="og:site_name" content="Denverledinosor" />
-<meta property="og:image" content="http://localhost:4000/assets/uploads/api.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-04-04T12:35:09+02:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/uploads/api.jpg" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Graphql" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-04T12:35:09+02:00","datePublished":"2024-04-04T12:35:09+02:00","description":"Portswigger Graphql","headline":"Graphql","image":"http://localhost:4000/assets/uploads/api.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/api/Graphql/"},"url":"http://localhost:4000/api/Graphql/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-04T12:35:09+02:00","datePublished":"2024-04-04T12:35:09+02:00","description":"Portswigger Graphql","headline":"Graphql","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/api/Graphql/"},"url":"http://localhost:4000/api/Graphql/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Denverledinosor" /></head>
 <link rel="shortcut icon" type="image/png" href="/assets/favicon/favicon.ico">
@@ -43,7 +41,7 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <img src="/assets/uploads/api.jpg" alt="" class="featured-image-post">
+    <img src="" alt="" class="featured-image-post">
     <h1 class="post-title p-name" itemprop="name headline">Graphql</h1>
     <p class="post-meta"><time class="dt-published" datetime="2024-04-04T12:35:09+02:00" itemprop="datePublished">
         Apr 4, 2024
@@ -52,8 +50,6 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="portswigger-graphql">Portswigger Graphql</h1>
-
-<p>Propriétaire: Jaouen Houllegatte</p>
 
 <p>GraphQL est un langage api fait pour simplifier la communication client-server.</p>
 
@@ -86,20 +82,20 @@ GraphQL est souvent utilisé pour de l’authentification.</p>
   <li><a href="https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/">https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/</a></li>
 </ul>
 
-<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled.png" alt="Untitled" /></p>
+<p><img src="/assets/uploads/Portswigger Graphql/Untitled.png" alt="Untitled" /></p>
 
 <p><a href="https://www.notion.so">https://www.notion.so</a></p>
 
-<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%201.png" alt="Untitled" /></p>
+<p><img src="/assets/uploads/Portswigger Graphql/Untitled 1.png" alt="Untitled" /></p>
 
 <p>L’introspection est une option proposée par GraphQL permettant d’établir un schéma de la base. Cela permet de développer la plateforme plus simplement
 Exemple 1 ou l’on injecte directement l’introspection dans l’onglet GraphQL de Burp</p>
 
-<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%202.png" alt="Untitled" /></p>
+<p><img src="/assets/uploads/Portswigger Graphql/Untitled 2.png" alt="Untitled" /></p>
 
 <p>Exemple 2 :</p>
 
-<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%203.png" alt="Untitled" /></p>
+<p><img src="/assets/uploads/Portswigger Graphql/Untitled 3.png" alt="Untitled" /></p>
 
 <p>Mais il existe aussi le cas où l’endpoint GraphQL est caché ainsi nous pouvons aussi encoder la requête dans l’url :</p>
 
@@ -111,7 +107,7 @@ Exemple 1 ou l’on injecte directement l’introspection dans l’onglet GraphQ
 <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sr">/api</span><span class="se">?</span><span class="sr">query=query+IntrospectionQuery+%7B%0D%0A++__schema%0a+%7B%0D%0A++++queryType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++mutationType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++subscriptionType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++types+%7B%0D%0A++++++...FullType%0D%0A++++%7D%0D%0A++++directives+%7B%0D%0A++++++name%0D%0A++++++description%0D%0A++++++args+%7B%0D%0A++++++++...InputValue%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+FullType+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++description%0D%0A++fields%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++args+%7B%0D%0A++++++...InputValue%0D%0A++++%7D%0D%0A++++type+%7B%0D%0A++++++...TypeRef%0D%0A++++%7D%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++inputFields+%7B%0D%0A++++...InputValue%0D%0A++%7D%0D%0A++interfaces+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++enumValues%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++possibleTypes+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+InputValue+on+__InputValue+%7B%0D%0A++name%0D%0A++description%0D%0A++type+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++defaultValue%0D%0A%7D%0D%0A%0D%0Afragment+TypeRef+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++ofType+%7B%0D%0A++++kind%0D%0A++++name%0D%0A++++ofType+%7B%0D%0A++++++kind%0D%0A++++++name%0D%0A++++++ofType+%7B%0D%0A++++++++kind%0D%0A++++++++name%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0</span><span class="err">A
 </span></code></pre></div></div>
 
-<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%204.png" alt="Untitled" /></p>
+<p><img src="/assets/uploads/Portswigger Graphql/Untitled 4.png" alt="Untitled" /></p>
 
 <p>Il est encore possible d’utiliser la fonctionnalité de suggestion pour établir un schéma.</p>
 

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-04-05T00:34:36+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">Graphql</title><link href="http://localhost:4000/api/Graphql/" rel="alternate" type="text/html" title="Graphql" /><published>2024-04-04T12:35:09+02:00</published><updated>2024-04-04T12:35:09+02:00</updated><id>http://localhost:4000/api/Portswigger%20Graphql</id><content type="html" xml:base="http://localhost:4000/api/Graphql/">&lt;h1 id=&quot;portswigger-graphql&quot;&gt;Portswigger Graphql&lt;/h1&gt;
-
-&lt;p&gt;Propriétaire: Jaouen Houllegatte&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-04-05T09:23:41+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">Graphql</title><link href="http://localhost:4000/api/Graphql/" rel="alternate" type="text/html" title="Graphql" /><published>2024-04-04T12:35:09+02:00</published><updated>2024-04-04T12:35:09+02:00</updated><id>http://localhost:4000/api/Portswigger%20Graphql</id><content type="html" xml:base="http://localhost:4000/api/Graphql/">&lt;h1 id=&quot;portswigger-graphql&quot;&gt;Portswigger Graphql&lt;/h1&gt;
 
 &lt;p&gt;GraphQL est un langage api fait pour simplifier la communication client-server.&lt;/p&gt;
 
@@ -33,20 +31,20 @@ GraphQL est souvent utilisé pour de l’authentification.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/&quot;&gt;https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/Portswigger Graphql/Untitled.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.notion.so&quot;&gt;https://www.notion.so&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%201.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/Portswigger Graphql/Untitled 1.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;L’introspection est une option proposée par GraphQL permettant d’établir un schéma de la base. Cela permet de développer la plateforme plus simplement
 Exemple 1 ou l’on injecte directement l’introspection dans l’onglet GraphQL de Burp&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%202.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/Portswigger Graphql/Untitled 2.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Exemple 2 :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%203.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/Portswigger Graphql/Untitled 3.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Mais il existe aussi le cas où l’endpoint GraphQL est caché ainsi nous pouvons aussi encoder la requête dans l’url :&lt;/p&gt;
 
@@ -58,7 +56,7 @@ Exemple 1 ou l’on injecte directement l’introspection dans l’onglet GraphQ
 &lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;sr&quot;&gt;/api&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;query=query+IntrospectionQuery+%7B%0D%0A++__schema%0a+%7B%0D%0A++++queryType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++mutationType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++subscriptionType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++types+%7B%0D%0A++++++...FullType%0D%0A++++%7D%0D%0A++++directives+%7B%0D%0A++++++name%0D%0A++++++description%0D%0A++++++args+%7B%0D%0A++++++++...InputValue%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+FullType+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++description%0D%0A++fields%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++args+%7B%0D%0A++++++...InputValue%0D%0A++++%7D%0D%0A++++type+%7B%0D%0A++++++...TypeRef%0D%0A++++%7D%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++inputFields+%7B%0D%0A++++...InputValue%0D%0A++%7D%0D%0A++interfaces+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++enumValues%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++possibleTypes+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+InputValue+on+__InputValue+%7B%0D%0A++name%0D%0A++description%0D%0A++type+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++defaultValue%0D%0A%7D%0D%0A%0D%0Afragment+TypeRef+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++ofType+%7B%0D%0A++++kind%0D%0A++++name%0D%0A++++ofType+%7B%0D%0A++++++kind%0D%0A++++++name%0D%0A++++++ofType+%7B%0D%0A++++++++kind%0D%0A++++++++name%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;A
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%204.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/Portswigger Graphql/Untitled 4.png&quot; alt=&quot;Untitled&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Il est encore possible d’utiliser la fonctionnalité de suggestion pour établir un schéma.&lt;/p&gt;
 
@@ -419,7 +417,7 @@ height(unit: FOOT)
 
 &lt;p&gt;La mutation permet de faire des modifications de données“server-side”.&lt;/p&gt;
 
-&lt;p&gt;Alors que les champs de requête sont exécutés en parallèle, les champs de mutation s’exécutent en série, les uns après les autres.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Portswigger Graphql</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/uploads/api.jpg" /><media:content medium="image" url="http://localhost:4000/assets/uploads/api.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Un peu d’api</title><link href="http://localhost:4000/api/" rel="alternate" type="text/html" title="Un peu d’api" /><published>2024-04-04T11:35:09+02:00</published><updated>2024-04-04T11:35:09+02:00</updated><id>http://localhost:4000/Un%20peu%20d&apos;api</id><content type="html" xml:base="http://localhost:4000/api/">&lt;h1 id=&quot;api-testing&quot;&gt;Api testing&lt;/h1&gt;
+&lt;p&gt;Alors que les champs de requête sont exécutés en parallèle, les champs de mutation s’exécutent en série, les uns après les autres.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Portswigger Graphql</summary></entry><entry><title type="html">Un peu d’api</title><link href="http://localhost:4000/api/" rel="alternate" type="text/html" title="Un peu d’api" /><published>2024-04-04T11:35:09+02:00</published><updated>2024-04-04T11:35:09+02:00</updated><id>http://localhost:4000/Un%20peu%20d&apos;api</id><content type="html" xml:base="http://localhost:4000/api/">&lt;h1 id=&quot;api-testing&quot;&gt;Api testing&lt;/h1&gt;
 
 &lt;p&gt;Propriétaire: Jaouen Houllegatte&lt;/p&gt;
 

@@ -4,12 +4,9 @@ title:  "Graphql"
 date:   2024-04-04 12:35:09 +0200
 categories: jekyll update
 permalink: /api/Graphql/
-image: /assets/uploads/api.jpg
 ---
 
 # Portswigger Graphql
-
-Propriétaire: Jaouen Houllegatte
 
 GraphQL est un langage api fait pour simplifier la communication client-server. 
 
@@ -38,20 +35,20 @@ La plupart des enpoints GraphQL sont :
 - [https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/graphql](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/graphql)
 - [https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/](https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/)
 
-![Untitled](Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled.png)
+![Untitled](/assets/uploads/Portswigger Graphql/Untitled.png)
 
 [https://www.notion.so](https://www.notion.so)
 
-![Untitled](Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%201.png)
+![Untitled](/assets/uploads/Portswigger Graphql/Untitled 1.png)
 
 L’introspection est une option proposée par GraphQL permettant d’établir un schéma de la base. Cela permet de développer la plateforme plus simplement
 Exemple 1 ou l’on injecte directement l’introspection dans l’onglet GraphQL de Burp
 
-![Untitled](Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%202.png)
+![Untitled](/assets/uploads/Portswigger Graphql/Untitled 2.png)
 
 Exemple 2 :
 
-![Untitled](Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%203.png)
+![Untitled](/assets/uploads/Portswigger Graphql/Untitled 3.png)
 
 Mais il existe aussi le cas où l’endpoint GraphQL est caché ainsi nous pouvons aussi encoder la requête dans l’url :
 
@@ -65,7 +62,7 @@ Prenons le cas où l’introspection est désactivé.
 /api?query=query+IntrospectionQuery+%7B%0D%0A++__schema%0a+%7B%0D%0A++++queryType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++mutationType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++subscriptionType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++types+%7B%0D%0A++++++...FullType%0D%0A++++%7D%0D%0A++++directives+%7B%0D%0A++++++name%0D%0A++++++description%0D%0A++++++args+%7B%0D%0A++++++++...InputValue%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+FullType+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++description%0D%0A++fields%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++args+%7B%0D%0A++++++...InputValue%0D%0A++++%7D%0D%0A++++type+%7B%0D%0A++++++...TypeRef%0D%0A++++%7D%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++inputFields+%7B%0D%0A++++...InputValue%0D%0A++%7D%0D%0A++interfaces+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++enumValues%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++possibleTypes+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+InputValue+on+__InputValue+%7B%0D%0A++name%0D%0A++description%0D%0A++type+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++defaultValue%0D%0A%7D%0D%0A%0D%0Afragment+TypeRef+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++ofType+%7B%0D%0A++++kind%0D%0A++++name%0D%0A++++ofType+%7B%0D%0A++++++kind%0D%0A++++++name%0D%0A++++++ofType+%7B%0D%0A++++++++kind%0D%0A++++++++name%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A
 ```
 
-![Untitled](Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%204.png)
+![Untitled](/assets/uploads/Portswigger Graphql/Untitled 4.png)
 
 Il est encore possible d’utiliser la fonctionnalité de suggestion pour établir un schéma.
 
