@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-04-05T09:44:01+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">Graphql</title><link href="http://localhost:4000/api/Graphql/" rel="alternate" type="text/html" title="Graphql" /><published>2024-04-04T12:35:09+02:00</published><updated>2024-04-04T12:35:09+02:00</updated><id>http://localhost:4000/api/Portswigger%20Graphql</id><content type="html" xml:base="http://localhost:4000/api/Graphql/">&lt;h1 id=&quot;portswigger-graphql&quot;&gt;Portswigger Graphql&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr_FR"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="fr_FR" /><updated>2024-04-05T10:09:33+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Denverledinosor</title><subtitle>Ce blog est à moi</subtitle><entry><title type="html">Graphql</title><link href="http://localhost:4000/api/Graphql/" rel="alternate" type="text/html" title="Graphql" /><published>2024-04-04T12:35:09+02:00</published><updated>2024-04-04T12:35:09+02:00</updated><id>http://localhost:4000/api/Portswigger%20Graphql</id><content type="html" xml:base="http://localhost:4000/api/Graphql/">&lt;h1 id=&quot;portswigger-graphql&quot;&gt;Portswigger Graphql&lt;/h1&gt;
 
 &lt;p&gt;GraphQL est un langage api fait pour simplifier la communication client-server.&lt;/p&gt;
 
@@ -417,7 +417,42 @@ height(unit: FOOT)
 
 &lt;p&gt;La mutation permet de faire des modifications de données“server-side”.&lt;/p&gt;
 
-&lt;p&gt;Alors que les champs de requête sont exécutés en parallèle, les champs de mutation s’exécutent en série, les uns après les autres.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Portswigger Graphql</summary></entry><entry><title type="html">Un peu d’api</title><link href="http://localhost:4000/api/" rel="alternate" type="text/html" title="Un peu d’api" /><published>2024-04-04T11:35:09+02:00</published><updated>2024-04-04T11:35:09+02:00</updated><id>http://localhost:4000/Un%20peu%20d&apos;api</id><content type="html" xml:base="http://localhost:4000/api/">&lt;h1 id=&quot;api-testing&quot;&gt;Api testing&lt;/h1&gt;
+&lt;p&gt;Alors que les champs de requête sont exécutés en parallèle, les champs de mutation s’exécutent en série, les uns après les autres.&lt;/p&gt;
+
+&lt;h2 id=&quot;prévenir-les-attaques-graphql&quot;&gt;Prévenir les attaques GraphQL&lt;/h2&gt;
+
+&lt;p&gt;Pour éviter de nombreuses attaques GraphQL courantes, suivez les étapes suivantes lorsque vous déployez votre API en production :&lt;/p&gt;
+
+&lt;p&gt;Si votre API n’est pas destinée à être utilisée par le grand public, désactivez l’introspection sur celle-ci. Cela rend plus difficile pour un attaquant d’obtenir des informations sur le fonctionnement de l’API et réduit le risque de divulgation indésirable d’informations.&lt;/p&gt;
+
+&lt;p&gt;Si votre API est destinée à être utilisée par le grand public, vous devrez probablement laisser l’introspection activée. Cependant, vous devez revoir le schéma de l’API pour vous assurer qu’il n’expose pas de champs involontaires au public.&lt;/p&gt;
+
+&lt;p&gt;Assurez-vous que les suggestions sont désactivées. Cela empêche les attaquants de pouvoir utiliser Clairvoyance ou des outils similaires pour glaner des informations sur le schéma sous-jacent.&lt;/p&gt;
+
+&lt;p&gt;Assurez-vous que le schéma de votre API n’expose aucun champ d’utilisateur privé, tel que des adresses e-mail ou des identifiants d’utilisateur.&lt;/p&gt;
+
+&lt;p&gt;Prévenir les attaques par force brute GraphQL
+Il est parfois possible de contourner la limitation de débit standard lors de l’utilisation des API GraphQL.&lt;/p&gt;
+
+&lt;p&gt;Pour vous défendre contre les attaques par force brute :&lt;/p&gt;
+
+&lt;p&gt;Limitez la profondeur des requêtes de votre API. Le terme « profondeur de requête » fait référence au “query depth” nombre de niveaux d’imbrication au sein d’une requête. Les requêtes fortement imbriquées peuvent avoir des implications significatives en termes de performances et peuvent potentiellement donner lieu à des attaques DoS si elles sont acceptées. En limitant la profondeur des requêtes acceptées par votre API, vous pouvez réduire les risques que cela se produise.&lt;/p&gt;
+
+&lt;p&gt;Configurez les limites de fonctionnement. Les limites d’opération vous permettent de configurer le nombre maximum de champs uniques, d’alias et de champs racine que votre API peut accepter.&lt;/p&gt;
+
+&lt;p&gt;Configurez le nombre maximum d’octets qu’une requête peut contenir.&lt;/p&gt;
+
+&lt;p&gt;Pensez à mettre en œuvre une analyse des coûts sur votre API. L’analyse des coûts est un processus par lequel une application de bibliothèque identifie le coût des ressources associé à l’exécution des requêtes au fur et à mesure de leur réception. Si une requête est trop complexe sur le plan informatique à exécuter, l’API la supprime.&lt;/p&gt;
+
+&lt;p&gt;Empecher les CSRF sur GraphQL&lt;/p&gt;
+
+&lt;p&gt;Pour vous défendre spécifiquement contre les vulnérabilités GraphQL CSRF, assurez-vous des points suivants lors de la conception de votre API :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Votre API n’accepte que les requêtes via POST codé en JSON.&lt;/li&gt;
+  &lt;li&gt;L’API valide que le contenu fourni correspond au type de contenu fourni.&lt;/li&gt;
+  &lt;li&gt;L’API dispose d’un mécanisme de jeton CSRF sécurisé.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">Portswigger Graphql</summary></entry><entry><title type="html">Un peu d’api</title><link href="http://localhost:4000/api/" rel="alternate" type="text/html" title="Un peu d’api" /><published>2024-04-04T11:35:09+02:00</published><updated>2024-04-04T11:35:09+02:00</updated><id>http://localhost:4000/Un%20peu%20d&apos;api</id><content type="html" xml:base="http://localhost:4000/api/">&lt;h1 id=&quot;api-testing&quot;&gt;Api testing&lt;/h1&gt;
 
 &lt;p&gt;Comme d’habitude cela commence par une phase de recon. L’objectif est de récolter un maximum d’informations.&lt;/p&gt;
 
