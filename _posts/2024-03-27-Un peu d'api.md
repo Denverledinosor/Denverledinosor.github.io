@@ -9,8 +9,6 @@ image: /assets/uploads/api.jpg
 
 # Api testing
 
-Propriétaire: Jaouen Houllegatte
-
 Comme d’habitude cela commence par une phase de recon. L’objectif est de récolter un maximum d’informations. 
 
 Souvent le point d’api est
