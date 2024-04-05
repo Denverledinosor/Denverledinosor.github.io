@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr_FR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Graphql | Denverledinosor</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Graphql" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="Portswigger Graphql" />
+<meta property="og:description" content="Portswigger Graphql" />
+<link rel="canonical" href="http://localhost:4000/api/Graphql/" />
+<meta property="og:url" content="http://localhost:4000/api/Graphql/" />
+<meta property="og:site_name" content="Denverledinosor" />
+<meta property="og:image" content="http://localhost:4000/assets/uploads/api.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-04T12:35:09+02:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/uploads/api.jpg" />
+<meta property="twitter:title" content="Graphql" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-04T12:35:09+02:00","datePublished":"2024-04-04T12:35:09+02:00","description":"Portswigger Graphql","headline":"Graphql","image":"http://localhost:4000/assets/uploads/api.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/api/Graphql/"},"url":"http://localhost:4000/api/Graphql/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Denverledinosor" /></head>
+<link rel="shortcut icon" type="image/png" href="/assets/favicon/favicon.ico">
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Denverledinosor</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">À propos de Denverledinosor.fr</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <img src="/assets/uploads/api.jpg" alt="" class="featured-image-post">
+    <h1 class="post-title p-name" itemprop="name headline">Graphql</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2024-04-04T12:35:09+02:00" itemprop="datePublished">
+        Apr 4, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="portswigger-graphql">Portswigger Graphql</h1>
+
+<p>Propriétaire: Jaouen Houllegatte</p>
+
+<p>GraphQL est un langage api fait pour simplifier la communication client-server.</p>
+
+<p>Cela permet au client de spécifier leformat et la donnée de la réponse permettant d’éviter une quantité de réponse inutile et des appels répété sur l’API REST.
+GraphQL est souvent utilisé pour de l’authentification.</p>
+
+<p>La plupart des enpoints GraphQL sont :</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/graphql</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/api</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/api/graphql</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/graphql/api</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/graphql/graphql</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/graphql/v1</code></li>
+</ul>
+
+<h2 id="ressources">Ressources</h2>
+
+<ul>
+  <li>Visualiser</li>
+  <li><a href="http://nathanrandal.com/graphql-visualizer/">http://nathanrandal.com/graphql-visualizer/</a></li>
+  <li><a href="https://graphql-kit.com/graphql-voyager/">https://graphql-kit.com/graphql-voyager/</a></li>
+  <li>Tool</li>
+  <li><a href="https://github.com/swisskyrepo/GraphQLmap">https://github.com/swisskyrepo/Grap…</a> : Repo de l’outil GraphQLmap développé par @Swissky.</li>
+  <li>ToolBurpsuite</li>
+  <li>Extension : InQL</li>
+  <li>Documentation</li>
+  <li><a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/graphql">https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/graphql</a></li>
+  <li><a href="https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/">https://www.vaadata.com/blog/fr/exploitation-dun-manque-de-controle-de-droits-sur-graphql/</a></li>
+</ul>
+
+<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled.png" alt="Untitled" /></p>
+
+<p><a href="https://www.notion.so">https://www.notion.so</a></p>
+
+<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%201.png" alt="Untitled" /></p>
+
+<p>L’introspection est une option proposée par GraphQL permettant d’établir un schéma de la base. Cela permet de développer la plateforme plus simplement
+Exemple 1 ou l’on injecte directement l’introspection dans l’onglet GraphQL de Burp</p>
+
+<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%202.png" alt="Untitled" /></p>
+
+<p>Exemple 2 :</p>
+
+<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%203.png" alt="Untitled" /></p>
+
+<p>Mais il existe aussi le cas où l’endpoint GraphQL est caché ainsi nous pouvons aussi encoder la requête dans l’url :</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sr">/api</span><span class="se">?</span><span class="sr">query=query+IntrospectionQuery+%7B%0A++__schema+%7B%0A++++queryType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++mutationType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++subscriptionType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++types+%7B%0D%0A++++++...FullType%0D%0A++++%7D%0D%0A++++directives+%7B%0D%0A++++++name%0D%0A++++++description%0D%0A++++++args+%7B%0D%0A++++++++...InputValue%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+FullType+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++description%0D%0A++fields%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++args+%7B%0D%0A++++++...InputValue%0D%0A++++%7D%0D%0A++++type+%7B%0D%0A++++++...TypeRef%0D%0A++++%7D%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++inputFields+%7B%0D%0A++++...InputValue%0D%0A++%7D%0D%0A++interfaces+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++enumValues%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++possibleTypes+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+InputValue+on+__InputValue+%7B%0D%0A++name%0D%0A++description%0D%0A++type+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++defaultValue%0D%0A%7D%0D%0A%0D%0Afragment+TypeRef+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++ofType+%7B%0D%0A++++kind%0D%0A++++name%0D%0A++++ofType+%7B%0D%0A++++++kind%0D%0A++++++name%0D%0A++++++ofType+%7B%0D%0A++++++++kind%0D%0A++++++++name%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0</span><span class="err">A
+</span></code></pre></div></div>
+
+<p>Prenons le cas où l’introspection est désactivé.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sr">/api</span><span class="se">?</span><span class="sr">query=query+IntrospectionQuery+%7B%0D%0A++__schema%0a+%7B%0D%0A++++queryType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++mutationType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++subscriptionType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++types+%7B%0D%0A++++++...FullType%0D%0A++++%7D%0D%0A++++directives+%7B%0D%0A++++++name%0D%0A++++++description%0D%0A++++++args+%7B%0D%0A++++++++...InputValue%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+FullType+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++description%0D%0A++fields%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++args+%7B%0D%0A++++++...InputValue%0D%0A++++%7D%0D%0A++++type+%7B%0D%0A++++++...TypeRef%0D%0A++++%7D%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++inputFields+%7B%0D%0A++++...InputValue%0D%0A++%7D%0D%0A++interfaces+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++enumValues%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++possibleTypes+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+InputValue+on+__InputValue+%7B%0D%0A++name%0D%0A++description%0D%0A++type+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++defaultValue%0D%0A%7D%0D%0A%0D%0Afragment+TypeRef+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++ofType+%7B%0D%0A++++kind%0D%0A++++name%0D%0A++++ofType+%7B%0D%0A++++++kind%0D%0A++++++name%0D%0A++++++ofType+%7B%0D%0A++++++++kind%0D%0A++++++++name%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0</span><span class="err">A
+</span></code></pre></div></div>
+
+<p><img src="Portswigger%20Graphql%208ea2466c99e944218ec53e7786091dcc/Untitled%204.png" alt="Untitled" /></p>
+
+<p>Il est encore possible d’utiliser la fonctionnalité de suggestion pour établir un schéma.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  #Full introspection query
+
+query IntrospectionQuery {
+    __schema {
+        queryType {
+            name
+        }
+        mutationType {
+            name
+        }
+        subscriptionType {
+            name
+        }
+        types {
+         ...FullType
+        }
+        directives {
+            name
+            description
+            args {
+                ...InputValue
+        }
+        onOperation  #Often needs to be deleted to run query
+        onFragment   #Often needs to be deleted to run query
+        onField      #Often needs to be deleted to run query
+        }
+    }
+}
+
+fragment FullType on __Type {
+    kind
+    name
+    description
+    fields(includeDeprecated: true) {
+        name
+        description
+        args {
+            ...InputValue
+        }
+        type {
+            ...TypeRef
+        }
+        isDeprecated
+        deprecationReason
+    }
+    inputFields {
+        ...InputValue
+    }
+    interfaces {
+        ...TypeRef
+    }
+    enumValues(includeDeprecated: true) {
+        name
+        description
+        isDeprecated
+        deprecationReason
+    }
+    possibleTypes {
+        ...TypeRef
+    }
+}
+
+fragment InputValue on __InputValue {
+    name
+    description
+    type {
+        ...TypeRef
+    }
+    defaultValue
+}
+
+fragment TypeRef on __Type {
+    kind
+    name
+    ofType {
+        kind
+        name
+        ofType {
+            kind
+            name
+            ofType {
+                kind
+                name
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+<span class="nx">__schema</span> <span class="p">{</span>
+<span class="nx">queryType</span> <span class="p">{</span>
+<span class="nx">name</span>
+<span class="p">},</span> <span class="nx">mutationType</span> <span class="p">{</span>
+<span class="nx">name</span>
+<span class="p">},</span> <span class="nx">types</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nf">fields</span><span class="p">(</span><span class="na">includeDeprecated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">name</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nx">args</span> <span class="p">{</span>
+<span class="nx">name</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nx">type</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">},</span> <span class="nx">defaultValue</span>
+<span class="p">},</span> <span class="nx">type</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">},</span> <span class="nx">isDeprecated</span><span class="p">,</span> <span class="nx">deprecationReason</span>
+<span class="p">},</span> <span class="nx">inputFields</span> <span class="p">{</span>
+<span class="nx">name</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nx">type</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">},</span> <span class="nx">defaultValue</span>
+<span class="p">},</span> <span class="nx">interfaces</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">},</span> <span class="nf">enumValues</span><span class="p">(</span><span class="na">includeDeprecated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">name</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nx">isDeprecated</span><span class="p">,</span> <span class="nx">deprecationReason</span><span class="p">,</span>
+<span class="p">},</span> <span class="nx">possibleTypes</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">},</span> <span class="nx">directives</span> <span class="p">{</span>
+<span class="nx">name</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nx">locations</span><span class="p">,</span> <span class="nx">args</span> <span class="p">{</span>
+<span class="nx">name</span><span class="p">,</span> <span class="nx">description</span><span class="p">,</span> <span class="nx">type</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">ofType</span> <span class="p">{</span>
+<span class="nx">kind</span><span class="p">,</span> <span class="nx">name</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">},</span> <span class="nx">defaultValue</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>query IntrospectionQuery {
+  __schema {
+
+    queryType { name }
+    mutationType { name }
+    subscriptionType { name }
+    types {
+      ...FullType
+    }
+    directives {
+      name
+      description
+
+      locations
+      args {
+        ...InputValue
+      }
+    }
+  }
+}
+
+fragment FullType on __Type {
+  kind
+  name
+  description
+
+  fields(includeDeprecated: true) {
+    name
+    description
+    args {
+      ...InputValue
+    }
+    type {
+      ...TypeRef
+    }
+    isDeprecated
+    deprecationReason
+  }
+  inputFields {
+    ...InputValue
+  }
+  interfaces {
+    ...TypeRef
+  }
+  enumValues(includeDeprecated: true) {
+    name
+    description
+    isDeprecated
+    deprecationReason
+  }
+  possibleTypes {
+    ...TypeRef
+  }
+}
+
+fragment InputValue on __InputValue {
+  name
+  description
+  type { ...TypeRef }
+  defaultValue
+
+}
+
+fragment TypeRef on __Type {
+  kind
+  name
+  ofType {
+    kind
+    name
+    ofType {
+      kind
+      name
+      ofType {
+        kind
+        name
+        ofType {
+          kind
+          name
+          ofType {
+            kind
+            name
+            ofType {
+              kind
+              name
+              ofType {
+                kind
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+</code></pre></div></div>
+
+<h2 id="la-mutation">La mutation</h2>
+
+<p>Mais d’abord comment fonctionne un champ normal. La requête est simple. Le champs name return une string définit dans l’objet “hero”</p>
+
+<p>|   hero {
+name
+}
+} |   “data”: {
+“hero”: {
+“name”: “R2-D2”
+}
+}
+} |
+| — | — |</p>
+
+<p>Ah oui et aussi il y a aussi les arguments :</p>
+
+<p>|  {
+human(id: “1000”) {
+name
+height
+}
+} | {
+“data”: {
+“human”: {
+“name”: “Luke Skywalker”,
+“height”: 1.72
+}
+}
+} |
+| — | — |</p>
+
+<p>| {
+human(id: “1000”) {
+name
+height(unit: FOOT)
+}
+} | {
+“data”: {
+“human”: {
+“name”: “Luke Skywalker”,
+“height”: 5.6430448
+}
+}
+} |
+| — | — |</p>
+
+<p>La mutation permet de faire des modifications de données“server-side”.</p>
+
+<p>Alors que les champs de requête sont exécutés en parallèle, les champs de mutation s’exécutent en série, les uns après les autres.</p>
+
+  </div><a class="u-url" href="/api/Graphql/" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Denverledinosor</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Denverledinosor</li><li><a class="u-email" href="mailto:denverledinosor@protonmail.com">denverledinosor@protonmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/denverledinosor"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">denverledinosor</span></a></li><li><a href="https://www.twitter.com/denverledinosor"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">denverledinosor</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Ce blog est à moi</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
